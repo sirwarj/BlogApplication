@@ -1,0 +1,37 @@
+<div class="col-md-4">
+    <div class="card my-4">
+      <h5 class="card-header">Search</h5>
+      <div class="card-body">
+          <form action="/posts/show/" method="get">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search for..." name="title">
+              <span class="input-group-btn">
+                <input type="submit" class="btn btn-secondary" value="Go!">
+              </span>
+            </div>
+          </form>
+      </div>
+    </div>
+    <div class="card my-4">
+      <h5 class="card-header">Categories</h5>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-6">
+            <ul class="list-unstyled mb-0">
+                <% categories.forEach(function(category){ %>
+                <li>
+                    <a href="/posts/show/?category=<%= category.name %>"><%= category.name %></a>
+                </li>
+                <% }) %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card my-4">
+      <h5 class="card-header">Side Widget</h5>
+      <div class="card-body">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, aut voluptatum nesciunt impedit molestiae natus, delectus distinctio quis pariatur commodi dolore facilis repellat placeat nihil veniam odit consectetur, qui in?
+      </div>
+    </div>
+  </div>
